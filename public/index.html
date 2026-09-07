@@ -1,0 +1,851 @@
+<!doctype html>
+<html lang="zh-CN" data-page-node-id="bMEb3D7rAXniDu4RzlQCPb">
+<head data-page-node-id="4i9n2Wt9N8Gfq29SVMXwqb">
+<meta charset="utf-8" data-page-node-id="PAVI8KjtWtDq6uf7bXVmSv">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" data-page-node-id="hj1c4CRaKSfkGyTG7l1AQL">
+<meta name="theme-color" content="#f6f1e6" media="(prefers-color-scheme: light)" data-page-node-id="6TjmLLuDUrDsxSy6eGFVK2">
+<meta name="theme-color" content="#151513" media="(prefers-color-scheme: dark)" data-page-node-id="iZ0JMk5ZefK6PNA7vY0Jl1">
+<title>格鲁吉亚 10 天 · 旅行手册</title>
+<style>
+:root{
+  --bg:#f6f1e6; --paper:#fffdf6; --ink:#2a241d; --muted:#7d7364; --faint:#a89c88;
+  --line:#e4dcc9; --line2:#d3c7ad; --accent:#c05a3a; --accent2:#3f7d63;
+  --warn:#b4402f; --warnbg:#fbeae5; --okbg:#eaf3ee; --chip:#f1e9d7;
+  --sea:#dfe9ee; --land:#f2ead6;
+  --shadow:0 1px 2px rgba(70,52,25,.07),0 8px 22px rgba(70,52,25,.07);
+  --sketch:#8a7c62;
+}
+html[data-theme="dark"]{
+  --bg:#151513; --paper:#1e1d1a; --ink:#ece5d8; --muted:#9c9384; --faint:#6f6759;
+  --line:#332f28; --line2:#443e35; --accent:#e58a63; --accent2:#6fb394;
+  --warn:#e58a63; --warnbg:#2b211d; --okbg:#1e2622; --chip:#272520;
+  --sea:#1c2429; --land:#232019;
+  --shadow:0 1px 2px rgba(0,0,0,.5),0 8px 22px rgba(0,0,0,.35);
+  --sketch:#6f6759;
+}
+@media (prefers-color-scheme:dark){
+  html:not([data-theme="light"]){
+    --bg:#151513; --paper:#1e1d1a; --ink:#ece5d8; --muted:#9c9384; --faint:#6f6759;
+    --line:#332f28; --line2:#443e35; --accent:#e58a63; --accent2:#6fb394;
+    --warn:#e58a63; --warnbg:#2b211d; --okbg:#1e2622; --chip:#272520;
+    --sea:#1c2429; --land:#232019;
+    --shadow:0 1px 2px rgba(0,0,0,.5),0 8px 22px rgba(0,0,0,.35);
+    --sketch:#6f6759;
+  }
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--bg); color:var(--ink);
+  font:16px/1.65 -apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  padding:0 0 64px; overflow-x:hidden;
+}
+body::before{
+  content:""; position:fixed; inset:0; pointer-events:none; z-index:0; opacity:.5;
+  background-image:radial-gradient(circle at 20% 12%,rgba(192,90,58,.05),transparent 45%),
+                   radial-gradient(circle at 82% 78%,rgba(63,125,99,.05),transparent 42%);
+}
+.wrap{max-width:760px;margin:0 auto;padding:0 16px;position:relative;z-index:1}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{margin:0;font-weight:800;letter-spacing:.01em}
+.sec{margin:26px 0 0}
+.sec-h{display:flex;align-items:baseline;gap:10px;margin:0 0 12px;padding:0 2px}
+.sec-h h2{font-size:19px}
+.sec-h .n{
+  font-size:11px;font-weight:800;color:var(--paper);background:var(--accent);
+  border-radius:20px;padding:2px 9px;letter-spacing:.08em;flex:none;transform:rotate(-2deg);
+}
+.sec-h .hint{font-size:12px;color:var(--faint);margin-left:auto;flex:none}
+
+/* header */
+header{padding:26px 0 6px;text-align:center}
+header .k{font-size:12px;letter-spacing:.34em;color:var(--accent);font-weight:800}
+header h1{font-size:29px;margin:8px 0 6px;letter-spacing:.02em}
+header .sub{font-size:13.5px;color:var(--muted)}
+header .sub b{color:var(--ink)}
+.tzbar{
+  margin:14px auto 0;display:inline-flex;gap:8px;flex-wrap:wrap;justify-content:center;
+  font-size:12px;color:var(--muted)
+}
+.tzbar span{background:var(--chip);border-radius:20px;padding:3px 11px}
+.tzbar b{color:var(--ink);font-variant-numeric:tabular-nums}
+#themeBtn{
+  position:fixed;right:12px;top:12px;z-index:20;width:40px;height:40px;border-radius:50%;
+  border:1px solid var(--line);background:var(--paper);color:var(--ink);font-size:17px;
+  cursor:pointer;box-shadow:var(--shadow);line-height:1;display:grid;place-items:center
+}
+
+/* now card */
+#now{
+  background:var(--paper);border:1px solid var(--line);border-radius:20px;
+  box-shadow:var(--shadow);padding:20px 18px 18px;margin-top:18px;position:relative;overflow:hidden
+}
+#now::after{
+  content:"";position:absolute;right:-40px;top:-40px;width:150px;height:150px;border-radius:50%;
+  background:radial-gradient(circle,rgba(192,90,58,.10),transparent 70%)
+}
+#now .lab{font-size:11.5px;letter-spacing:.22em;color:var(--accent);font-weight:800}
+#now .what{font-size:22px;font-weight:800;margin:8px 0 2px;line-height:1.3}
+#now .sub2{font-size:13px;color:var(--muted);margin-bottom:14px}
+.cd{display:flex;gap:8px;flex-wrap:wrap}
+.cd .u{
+  flex:1 1 68px;min-width:68px;background:var(--chip);border-radius:14px;padding:10px 4px 8px;text-align:center
+}
+.cd .u b{display:block;font-size:27px;font-weight:800;font-variant-numeric:tabular-nums;line-height:1.05;letter-spacing:-.02em}
+.cd .u i{font-style:normal;font-size:11px;color:var(--muted);letter-spacing:.1em}
+#now .at{
+  margin-top:13px;padding-top:12px;border-top:1px dashed var(--line2);
+  font-size:12.5px;color:var(--muted);display:flex;flex-wrap:wrap;gap:4px 14px
+}
+#now .at b{color:var(--ink);font-variant-numeric:tabular-nums}
+.clocks{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap}
+.clocks div{
+  font-size:12px;color:var(--muted);background:var(--chip);border-radius:20px;padding:4px 11px;
+  font-variant-numeric:tabular-nums
+}
+.clocks b{color:var(--ink)}
+
+/* map */
+.mapcard{
+  background:var(--paper);border:1px solid var(--line);border-radius:20px;
+  box-shadow:var(--shadow);padding:14px 10px 10px
+}
+.mapcard svg{display:block;width:100%;height:auto;max-height:430px}
+.legend{display:flex;flex-wrap:wrap;gap:5px 12px;padding:8px 6px 2px;font-size:11.5px;color:var(--muted)}
+.legend i{display:inline-block;width:14px;height:3px;border-radius:2px;margin-right:5px;vertical-align:middle}
+
+/* cards */
+.card{
+  background:var(--paper);border:1px solid var(--line);border-radius:18px;
+  box-shadow:var(--shadow);padding:15px 16px;margin-bottom:12px
+}
+.card h3{font-size:15.5px;display:flex;align-items:center;gap:8px;margin-bottom:10px}
+.card h3 .tag{
+  font-size:10.5px;font-weight:800;background:var(--chip);color:var(--muted);
+  border-radius:20px;padding:2px 8px;letter-spacing:.08em
+}
+.kv{display:grid;grid-template-columns:76px 1fr;gap:6px 10px;font-size:14px}
+.kv dt{color:var(--muted);font-size:13px}
+.kv dd{margin:0}
+.kv dd b{font-variant-numeric:tabular-nums}
+.tline{display:flex;gap:9px;align-items:baseline;font-size:14px;padding:3px 0;border-top:1px dashed var(--line)}
+.tline:first-of-type{border-top:0}
+.tline .tt{flex:none;width:52px;font-weight:800;font-variant-numeric:tabular-nums;color:var(--accent)}
+.tline .tzx{flex:none;font-size:10.5px;color:var(--faint);width:34px}
+.tline .tx{flex:1}
+.tline .tx small{display:block;color:var(--muted);font-size:12px;line-height:1.5}
+.plink{
+  color:var(--accent);border-bottom:1px dashed var(--accent);cursor:pointer;font-weight:600
+}
+.plink:active{opacity:.6}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:560px){.grid2{grid-template-columns:1fr}}
+.hotel{border-left:3px solid var(--accent2);padding-left:12px;margin-bottom:13px}
+.hotel:last-child{margin-bottom:0}
+.hotel .hn{font-weight:800;font-size:14.5px}
+.hotel .hd{font-size:13px;color:var(--muted);margin:2px 0 4px}
+.hotel .hm{font-size:12.5px;color:var(--muted)}
+.hotel .hm b{color:var(--ink);font-variant-numeric:tabular-nums}
+
+/* days */
+.day{
+  background:var(--paper);border:1px solid var(--line);border-radius:18px;
+  box-shadow:var(--shadow);margin-bottom:11px;overflow:hidden
+}
+.day-h{display:flex;align-items:center;gap:11px;padding:13px 15px;cursor:pointer;user-select:none}
+.day-h .dot{width:11px;height:11px;border-radius:50%;flex:none}
+.day-h .dnum{font-size:12px;font-weight:800;color:var(--muted);flex:none;letter-spacing:.04em}
+.day-h .dtitle{flex:1;font-size:15.5px;font-weight:800;line-height:1.35}
+.day-h .dtitle em{display:block;font-style:normal;font-size:12px;color:var(--muted);font-weight:500;margin-top:1px}
+.day-h .caret{flex:none;color:var(--faint);font-size:12px;transition:transform .22s}
+.day.open .day-h .caret{transform:rotate(90deg)}
+.day-b{display:none;border-top:1px solid var(--line);padding:4px 15px 15px}
+.day.open .day-b{display:block}
+.daymap{margin:12px 0 4px;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--bg)}
+.daymap svg{display:block;width:100%;height:auto;max-height:260px}
+.stay{
+  font-size:12.5px;color:var(--muted);background:var(--chip);border-radius:12px;
+  padding:7px 11px;margin:10px 0 4px
+}
+.stay b{color:var(--ink)}
+.navall{
+  display:block;text-align:center;background:var(--accent);color:#fff;border-radius:12px;
+  padding:10px;font-size:14px;font-weight:800;margin:10px 0 2px
+}
+.navall:active{opacity:.85}
+.it{display:flex;gap:10px;padding:8px 0;border-top:1px dashed var(--line)}
+.it:first-child{border-top:0}
+.it .t{flex:none;width:50px;font-weight:800;font-variant-numeric:tabular-nums;font-size:14px;color:var(--accent);padding-top:1px}
+.it .c{flex:1;font-size:14px;line-height:1.6}
+.it .c small{display:block;color:var(--muted);font-size:12.5px;margin-top:1px}
+.badge{
+  display:inline-block;font-size:10.5px;font-weight:800;background:var(--warnbg);color:var(--warn);
+  border-radius:20px;padding:1px 8px;margin-left:5px;vertical-align:1px;letter-spacing:.03em
+}
+.badge.ok{background:var(--okbg);color:var(--accent2)}
+.note{
+  font-size:13px;background:var(--warnbg);border-radius:12px;padding:9px 12px;margin:10px 0 2px;
+  color:var(--ink);line-height:1.6
+}
+.note b{color:var(--warn)}
+
+/* todo */
+.todo{list-style:none;margin:0;padding:0;counter-reset:t}
+.todo li{
+  background:var(--paper);border:1px solid var(--line);border-radius:14px;
+  padding:11px 13px 11px 44px;margin-bottom:8px;font-size:14px;position:relative;line-height:1.6
+}
+.todo li::before{
+  counter-increment:t;content:counter(t);position:absolute;left:13px;top:11px;
+  width:21px;height:21px;border-radius:50%;background:var(--chip);color:var(--muted);
+  font-size:11.5px;font-weight:800;display:grid;place-items:center
+}
+.todo li small{display:block;color:var(--muted);font-size:12.5px;margin-top:2px}
+.todo li.urgent{border-color:var(--warn)}
+.todo li.urgent::before{background:var(--warn);color:#fff}
+
+/* tips */
+.tips{display:grid;grid-template-columns:1fr 1fr;gap:11px}
+@media(max-width:560px){.tips{grid-template-columns:1fr}}
+.tip{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:13px 14px}
+.tip h4{margin:0 0 6px;font-size:14px;font-weight:800}
+.tip p{margin:0;font-size:13px;color:var(--muted);line-height:1.65}
+.tip b{color:var(--ink)}
+footer{text-align:center;color:var(--faint);font-size:12px;margin-top:28px;line-height:1.8}
+</style>
+</head>
+<body data-page-node-id="IDSAXXbe3x3dw4CEJbFuOs">
+<button id="themeBtn" aria-label="切换配色" data-page-node-id="e2O2w28cUHwtkWFf62UrDa">◐</button>
+
+<div class="wrap" data-page-node-id="5zMuKS3X8oVdGfRqbgSCHf">
+<header data-page-node-id="4MdgTXoHBBdz3SgNKk4J5t">
+  <div class="k" data-page-node-id="L0QcP02t4MM7tNBR5m154b">GEORGIA · 2026</div>
+  <h1 data-page-node-id="lTxofqlSmf1giuit1tBANo">格鲁吉亚 10 天</h1>
+  <div class="sub" data-page-node-id="jUlRlNz4hCXH2vpCvWAwG8">9.25 — 10.5 · <b data-page-node-id="rwlBz2PRIpCG0j7NBRGQKa">2 人</b> · 第比利斯 · 斯瓦涅季徒步 · 巴统</div>
+  <div class="tzbar" data-page-node-id="0gdX9PcP7rl6LSHCTFaj6x">
+    <span data-page-node-id="Xa7DohRlzcGIKueXXGFpWP">格鲁吉亚 <b data-page-node-id="KL16V8GEVwC0AGqj6BL2S9">GET</b> · UTC+4</span>
+    <span data-page-node-id="B1MuSl4g6FDU4eG2mT8vbX">北京 <b data-page-node-id="lW9mcTd6azbre0hw88XpWJ">CST</b> · UTC+8</span>
+    <span data-page-node-id="V9KrRXDSONGqE0JC6IO1Uc">北京 − 4h = 第比利斯</span>
+  </div>
+</header>
+
+<section id="now" data-page-node-id="SuPA6pVFtFvx88UW5Dulnb">
+  <div class="lab" data-page-node-id="9OKZw5gCk06sVBRc8fqfRQ">此 刻 关 注</div>
+  <div class="what" id="nWhat" data-page-node-id="lrrd55QDna5WBeBugkPE6I">—</div>
+  <div class="sub2" id="nSub" data-page-node-id="UyDNvaC9Yy6cDAyLsmk4U4">—</div>
+  <div class="cd" id="nCd" data-page-node-id="YeAxPSpJHhSF8O7NQtyRdP"></div>
+  <div class="at" id="nAt" data-page-node-id="ChLxlFlrmSnUBOVc3plJs3"></div>
+  <div class="clocks" id="nClock" data-page-node-id="6fQ1CNHwbwgjtPtjEmdPdH"></div>
+</section>
+
+<section class="sec" data-page-node-id="sew4TeYrgIbR45yXkgalAv">
+  <div class="sec-h" data-page-node-id="55UZW0Rdv5AEHvjqjJgVOa"><span class="n" data-page-node-id="9sFqZxizALPdTGHfkA1NnR">MAP</span><h2 data-page-node-id="cHAcd7NuAu5VgNRxu1L1Us">行程总览</h2><span class="hint" data-page-node-id="rZ4EN58SBVfC13CHWb8tGg">点地名直接导航</span></div>
+  <div class="mapcard" data-page-node-id="SRT3sciHjCOLzKC0ve8oHy">
+    <svg id="bigmap" viewBox="0 0 800 470" role="img" aria-label="格鲁吉亚行程总览地图" data-page-node-id="5uC1XAzYyM9waJkwzFyibp"></svg>
+    <div class="legend" id="legend" data-page-node-id="raNHo78nvKxRAAdHJSYqxp"></div>
+  </div>
+</section>
+
+<section class="sec" data-page-node-id="gTQgIZ3Ft82TQJl0unjaBA">
+  <div class="sec-h" data-page-node-id="BZG8vlHq0wQdCvFtLQHI7a"><span class="n" data-page-node-id="5kBFumYSUJ4q7XL85Pjg16">BOOKED</span><h2 data-page-node-id="UGUCBZmUSkqlYDiWXeneOg">已确认</h2><span class="hint" data-page-node-id="ZG9euGp1LBbYlP7p6CaxnY">时间 · 地址 · 电话</span></div>
+
+  <div class="card" data-page-node-id="jrC8XEroT6Bk98Fiq0MSjq">
+    <h3 data-page-node-id="AKaOBtH66SrH1tIicKGfcy">机票 <span class="tag" data-page-node-id="863JyprHoWC02m1AkxdDEn">EMIRATES · 2 人</span></h3>
+    <div class="tline" data-page-node-id="22QqHumWpDCRFZwnkZsG8y"><span class="tt" data-page-node-id="gjJKLdWWEndnDZCsLYcpcY">9/25</span><span class="tzx" data-page-node-id="NJLbm11pN94f3h8HVpXupr">北京</span><span class="tx" data-page-node-id="rDFgRLaDHJ3GAuKw19ApyS">00:05 上海浦东 T2 起飞 · <b data-page-node-id="EMgA78ByRZ23YuahZWWbaO">EK303</b><small data-page-node-id="2C6skQNJtALa7r4dWBWlHW">→ 04:45 迪拜 T3 落地（迪拜 UTC+4）· 转 T2</small></span></div>
+    <div class="tline" data-page-node-id="x3rffbX0sLuezCMVzrAIwZ"><span class="tt" data-page-node-id="C4JSeH0AgVy8YlOBtsYmJI">9/25</span><span class="tzx" data-page-node-id="M1t5E5XuhcTpm3G7HCmT7Y">迪拜</span><span class="tx" data-page-node-id="sPQFWt9rKGnIGWLrReTWao">12:10 迪拜 T2 起飞 · <b data-page-node-id="B0zycP5ytR1gzcZQtYJmgP">EK2200</b><small data-page-node-id="6QGgZNYsdDJNrAoJmGlkCf">→ 15:35 第比利斯 TBS 落地</small></span></div>
+    <div class="tline" data-page-node-id="aV8c9rrBMuvUWzLpCqworw"><span class="tt" data-page-node-id="T1iz3BOuZTiHOSVvmD53DB">10/5</span><span class="tzx" data-page-node-id="5EYsWH1YX26bib8h00ZPV6">GET</span><span class="tx" data-page-node-id="fPNHhXU86IVDE4QgmPZ726">16:35 第比利斯 TBS 起飞 · <b data-page-node-id="pPTEVEO53qDPINVqB4hBFk">EK2201</b><small data-page-node-id="KqDM0N4HCofU5dWHAsSz83">→ 19:50 迪拜 T2 落地 · 转 T3</small></span></div>
+    <div class="tline" data-page-node-id="zdyDeTWyNP3EqXqBW1nhDU"><span class="tt" data-page-node-id="FUV2x61UsvAvAohpwdAjNK">10/6</span><span class="tzx" data-page-node-id="dRa363gjQSAWqowBKifX56">迪拜</span><span class="tx" data-page-node-id="miRS4gRaab4tmVjIzaqOGk">02:50 迪拜 T3 起飞 · <b data-page-node-id="TpRZHMXsUGpSUDRDyVe1Tz">EK302</b><small data-page-node-id="yF1X4bVPTVoJwRCyphGa98">→ 15:30 上海浦东 T2 落地（北京时间）</small></span></div>
+    <div class="note" data-page-node-id="HJUc5u0YQUgM4SB72W0whh">去程 9/25 <b data-page-node-id="GeVjgoOzKByZs1nLeg0ZdY">00:05</b> 起飞，请 <b data-page-node-id="gWzhn5KlPLrkiP67CAeweI">9/24 晚 21:00 前</b> 到浦东 T2。行李直挂第比利斯，迪拜不出机场。</div>
+  </div>
+
+  <div class="grid2" data-page-node-id="XxuvwtskAbtZl5p5sEAOLl">
+    <div class="card" data-page-node-id="Bdnu256fgTqeUb2MjbW5Wt">
+      <h3 data-page-node-id="Fk2slZSjl4oe36cyZHM9J9">租车 <span class="tag" data-page-node-id="8DF1bwlqtlHd2Bru9ziK1a">ALAMO</span></h3>
+      <dl class="kv" data-page-node-id="QgtA35dqeOOYmmBOMMmBA4">
+        <dt data-page-node-id="eLEmReOUQg2HALHR9hnqBC">车型</dt><dd data-page-node-id="P7psokf030mfkX30IUYaUW">Toyota RAV4 或同组 · 自动 · 5 座</dd>
+        <dt data-page-node-id="csHfbc5yogw6GELs3jGMyG">取车</dt><dd data-page-node-id="nq1dCWDD5EwQIySbPjn2wQ"><b data-page-node-id="C5gAH5DFtSrh9fIsXbt183">9/25 18:00</b><br data-page-node-id="FQ1BAW4VxwcqEXtnbz4JpO">第比利斯国际机场 TBS<br data-page-node-id="HC4a6XYAXaes2Iu36P4wtP"><small data-page-node-id="H6bw2TaJFGHN4XV9JVHNGL">24 小时柜台 · 到达厅</small></dd>
+        <dt data-page-node-id="nzph0dZfQp0BGkKHl3WqDM">还车</dt><dd data-page-node-id="W2nfTFemEGCsDIirAJKSoD"><b data-page-node-id="gaKUmklMLhnF91nMpWRMv0">10/2 17:00</b><br data-page-node-id="3o18nLpR62TuscYS7AS8HA"><span class="plink" data-p="tbs" data-page-node-id="apmiujZBxLBarsOSYRihGv">第比利斯国际机场 TBS</span><br data-page-node-id="ulAgy37nbdkB3STuezeZdg"><small data-page-node-id="MHnrusSjHFfPy9VlvPHFa0">争取改 <span class="plink" data-p="free" data-page-node-id="EFv5yRLLKFKI5zM2C0oYXn">自由广场</span>，见待办 ①</small></dd>
+        <dt data-page-node-id="9ximKtvnIZYQKdd8wCl9DC">电话</dt><dd data-page-node-id="IcUTfHVeqDb2sfLL87ntPa"><a href="tel:+995577347070" style="color:var(--accent)" data-page-node-id="EgwnHuSpE9Bx8Z9LF3Zs5f">+995 577 34 70 70</a></dd>
+        <dt data-page-node-id="NtC1Kmn9BHqnUgMwQDrKzq">材料</dt><dd data-page-node-id="zeC3Z9lFxW6xBTdLvHlaU7">中国驾照原件 + 国际驾照认证件 + 国际信用卡</dd>
+      </dl>
+      <div class="note" style="margin-bottom:0" data-page-node-id="yfELpw1Um30dteg9mmreWG">取车人姓名见订单，本页不展示。取车时<b data-page-node-id="TEe5lE58xEWsizej5EZoTZ">拍一圈车身视频</b>留证。</div>
+    </div>
+
+    <div class="card" data-page-node-id="diECFOBjs2ykTB8q7lsEGY">
+      <h3 data-page-node-id="qkiPDp6Bsl0uGu1rZJA6af">住宿 <span class="tag" data-page-node-id="G8BXhb5kTzF0IwAaiBV1Rq">4 段已订</span></h3>
+      <div class="hotel" data-page-node-id="IiUYohT6AQnI036LvCiOCn">
+        <div class="hn" data-page-node-id="REBI4OMtDDtXnD6DD65O6d">① Central Tbilisi · Patio Apartment</div>
+        <div class="hd" data-page-node-id="BMCDIzvw7DpEieIznihmix"><span class="plink" data-p="vert" data-page-node-id="LRZjwkoVMovFh7XRqxn2MS">56 Vertskhli St, Tbilisi</span> · 房东 Mikheili</div>
+        <div class="hm" data-page-node-id="ZrPYKs05H0Qi5LLcKd8uJ9">9/25 <b data-page-node-id="rsRQRjBgETG3JvCqizZt67">14:00</b> 入住 → 9/26 <b data-page-node-id="98JnARdFM5Dx1TAxDGVBkF">12:00</b> 退房</div>
+      </div>
+      <div class="hotel" data-page-node-id="FnisyOBNpVIm3hhOUbwOBZ">
+        <div class="hn" data-page-node-id="sEgM2fPJeBC82AoCBlCmac">② Mestia Panorama Deluxe Double 2</div>
+        <div class="hd" data-page-node-id="0B481btMhrkpVW7MOrRGUX"><span class="plink" data-p="mestia" data-page-node-id="iw8Hxbrcs4MuwN2wEHHuuB">Mestia, Svaneti</span> · 房东 Lasha</div>
+        <div class="hm" data-page-node-id="4Jc0NCgCreja4DcAyv57T7">9/26 <b data-page-node-id="KWPVaLRIXyQ687po7BNrkJ">14:00</b> 入住 → 9/27 <b data-page-node-id="1iclJzA5zDSF9n54TyvZ7p">11:00</b> 退房</div>
+      </div>
+      <div class="hotel" data-page-node-id="uE1iAw3SubxsEk4iBALhqc">
+        <div class="hn" data-page-node-id="zP7wWyjnH1v5EOj3VHn7y5">③ Stay in Style · Old City Charm</div>
+        <div class="hd" data-page-node-id="LWdiXdYiNzdU5EQ9j2ZQoO"><span class="plink" data-p="batumi" data-page-node-id="rGiEjCeDwmgOMXY621pCmy">24 Noe Zhordania St, Batumi</span> · 房东 Linda</div>
+        <div class="hm" data-page-node-id="Um4pf3GypXACNIaSBcuoic">9/30 <b data-page-node-id="DwnEWUzOTJ48Zu5DgA9Zel">14:00</b> 入住 → 10/2 <b data-page-node-id="IueUIA3hNvwwxUib6UZNjT">11:00</b> 退房</div>
+      </div>
+      <div class="hotel" data-page-node-id="5RDfUgj2Uk3fChvTJU2O70">
+        <div class="hn" data-page-node-id="MCdIHPdrNcGeGxGbHQTBRw">④ True Old Tbilisi Charm &amp; Balcony</div>
+        <div class="hd" data-page-node-id="9bWKglBudseKNO5vr7wjMX"><span class="plink" data-p="fab" data-page-node-id="iaTrgNHmDH9tMgKKuIzIyD">99 Mikheili Tsinandzgvrishvili St</span> · 房东 Liana</div>
+        <div class="hm" data-page-node-id="33myKX01D7r7KSNF3iyig9">10/2 <b data-page-node-id="aU0dqqq5MqVACgslKjo6ft">14:00</b> 入住 → 10/5 <b data-page-node-id="jdnHwyduWOjl4FHRfBl568">12:00</b> 退房</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" data-page-node-id="Jqq9HxovTl5ZaU5gwDoXnB">
+    <h3 data-page-node-id="SNM0sfEe2IdzU4EKinkcCE">徒步住宿 <span class="tag" data-page-node-id="jpCOrq4YBsAIX5eFxBZNkt">现场订 · 见待办</span></h3>
+    <dl class="kv" data-page-node-id="c4pU9hu27KXYCCxtZBHELY">
+      <dt data-page-node-id="7vIxouyUl8ftE4TBodHyYy">9/27</dt><dd data-page-node-id="sUCvGDqerRfTxO3XiCHL71">扎贝希 <span class="plink" data-p="zhab" data-page-node-id="s1D2NYyoAI69AFeBghK7Na">Zhabeshi</span> 村民宿</dd>
+      <dt data-page-node-id="cEryDnGR3gT53CKFW6PGMD">9/28</dt><dd data-page-node-id="2r8WMtOd90mIsUb22nwdfX">阿迪希 <span class="plink" data-p="adishi" data-page-node-id="TFDt2E5PBouIcYFZiOFWw7">Adishi</span> 村民宿</dd>
+      <dt data-page-node-id="UfN43k7ZaOQjeKGmJhfyCr">9/29</dt><dd data-page-node-id="yNDNDOEMDClwGllOdRpn4t">乌树故里 <span class="plink" data-p="ushg" data-page-node-id="d3wUfyLstroTW2r8IsVXfN">Ushguli</span> 村民宿</dd>
+    </dl>
+  </div>
+</section>
+
+<section class="sec" data-page-node-id="yuYNUuyOHLVlZ560JCc5eX">
+  <div class="sec-h" data-page-node-id="mhw9L9jXYlbf9uGSsZUncS"><span class="n" data-page-node-id="v46ZfccNGdsqXVt9FMwOsF">DAYS</span><h2 data-page-node-id="WMKdaRQV1Dxw55QsuOskvd">逐日行程</h2><span class="hint" data-page-node-id="QMx7IHEtQkTNTLCLb8rHiN">点标题展开当日路线</span></div>
+  <div id="days" data-page-node-id="YOzGTjKAg7V8X3kJPRET4T"></div>
+</section>
+
+<section class="sec" data-page-node-id="XDgOcjFtZ76gSiUY8ZJvv8">
+  <div class="sec-h" data-page-node-id="PaGeBfigMMsy6YHwLZIw2F"><span class="n" data-page-node-id="AqGOmTkFMFDtjYcRRBEVLX">TODO</span><h2 data-page-node-id="ifPONMQJwlSk85I66nzGth">待办清单</h2><span class="hint" data-page-node-id="yHEhiPkaLQ1uHXlMlBd6UH">办完一项说一声，我改页面</span></div>
+  <ol class="todo" data-page-node-id="63GhB7PFFYW8qXntpzoDtM">
+    <li class="urgent" data-page-node-id="DM9otW0daoGeXostNfNSmj">9/25 取车时当面确认能否改<b data-page-node-id="gsG9UZvCGF3rBHK8yHiNKF">自由广场还车</b><small data-page-node-id="wY6m8ID2K8UvkHty9vQHBs">订单写的是 TBS 机场。若不行，10/2 直接开到 TBS 还车，再打车 30 分钟回市区（约 25–30 GEL）</small></li>
+    <li class="urgent" data-page-node-id="tByXnTkJNnmgjjzzsDcxfX">给梅斯蒂亚房东 Lasha 发消息，确认车能免费停 4 天（9/27–9/30）<small data-page-node-id="KPQ7LRoXK0zzLUBCFc2v89">徒步期间车停梅斯蒂亚，从乌树故里包车回来取</small></li>
+    <li class="urgent" data-page-node-id="rhXT90mFd8ya7CUnd5k5ew">提前约 9/30 早上 7:00 乌树故里 → 梅斯蒂亚 的 4WD 包车<small data-page-node-id="pEaMyzgF9At7gehly4S4BF">让 Adishi / Ushguli 民宿老板代叫最稳，烂路约 2h，参考价 30–50 GEL 一车</small></li>
+    <li data-page-node-id="2fBEAOCDzuz6WTj7n8CAeU">9/27 到扎贝希后立刻订 9/28 晚阿迪希民宿</li>
+    <li data-page-node-id="ccAXg4YSIwFu5jEJB8nRtJ">9/28 到阿迪希后立刻订 9/29 晚乌树故里民宿</li>
+    <li class="urgent" data-page-node-id="MHygTRBPzOND4cH3E6AFTX">10/3–10/4 Tbilisoba 期间老城餐厅<b data-page-node-id="Jdqf1sDIeMhRs8bUMp4u6A">提前订位</b><small data-page-node-id="am9OyfhiV7H2iksUUEAjnl">全城爆满，节日那两天别指望walk-in</small></li>
+    <li data-page-node-id="nOswUwI7M5gecwjKmAHNDK">买 eSIM 或机场电话卡（Magti / Beeline）</li>
+    <li data-page-node-id="pL7I8QZ0PPW8tOFxG1Cs01">换汇：机场只换少量，市区兑换点汇率更好；山区只收现金，梅斯蒂亚 ATM 少</li>
+    <li data-page-node-id="EjkS23FSUMu1CWIYZBYSiI">徒步装备：防水冲锋衣、登山鞋、登山杖、头灯、防晒、现金零钱</li>
+    <li data-page-node-id="RLgI76vQElnOICS3riFKCA">下载离线地图（Google Maps 离线包 + Maps.me）</li>
+    <li data-page-node-id="GCDl7N2e6MTrx2pOZdOOIz">带齐中国驾照原件 + 国际驾照认证件 + 国际信用卡</li>
+    <li data-page-node-id="lw09VYCzeSxMpRuctN9C7X">买含徒步/高风险运动的旅行保险</li>
+    <li data-page-node-id="i5o9GM1DtfpN5HQ3hrR8fA">10/5 国际航班提前 3 小时到机场，13:00 出发</li>
+  </ol>
+</section>
+
+<section class="sec" data-page-node-id="LhLALBtrtbXAskCz799DnO">
+  <div class="sec-h" data-page-node-id="jFFzZIbcgDIuYNksM3G1C8"><span class="n" data-page-node-id="hkTmH0kA8qOGgUz1AAlViy">TIPS</span><h2 data-page-node-id="K5bB813u5dZS4jlI2mRBED">实用贴士</h2></div>
+  <div class="tips" data-page-node-id="nmwS81IOaq1oXJUBQEQxyb">
+    <div class="tip" data-page-node-id="I6UQxXIruq028CeqjBfc5U"><h4 data-page-node-id="jFWFhRHYNNaqBDjNfCSIx7">时区</h4><p data-page-node-id="pIEfGH30W9vQc23lSstoQk">格鲁吉亚 <b data-page-node-id="r369UYAqJbMhqoVwH7C4uf">GET · UTC+4</b>，全年无夏令时。北京 <b data-page-node-id="IB3DrUN0xMDHHg15ZutG3o">UTC+8</b>，两地恒定差 4 小时，<b data-page-node-id="cZMdmzc38aZNTdrZ3xuLKF">北京时间 − 4h = 第比利斯时间</b>。本页无标注的时间均为 GET。</p></div>
+    <div class="tip" data-page-node-id="NdjODWScH62vWAoZ2ZhL8v"><h4 data-page-node-id="VZfS7d8MWWb2zBz6szByaZ">驾驶</h4><p data-page-node-id="2XDBVPww7o9ISMEx7vJoYa">靠右行驶，和中国一样。山路多弯、大货车多、本地车速快，<b data-page-node-id="C5osUKNLvp2ADTKYMC3PF1">不要夜路</b>。第比利斯市区停车看路牌，黄线禁停。RAV4 能走乌树故里烂路，但慢，碎石路 2h 起。</p></div>
+    <div class="tip" data-page-node-id="LvJJLTxfuhE25esKgiHRkK"><h4 data-page-node-id="OfqwcRSXCM95CdrUEluZfZ">现金</h4><p data-page-node-id="xgowI0HA7KVLNaqhVMkyOH">货币拉里 <b data-page-node-id="KK0rbjIALZsL9KEpzqhc6a">GEL</b>。第比利斯、巴统刷卡普遍，<b data-page-node-id="gcchWLG9XnULRNgvBzheEc">斯瓦涅季山区基本只收现金</b>，梅斯蒂亚有 ATM 但常排队或故障，务必在祖格迪迪或库塔伊西取够。</p></div>
+    <div class="tip" data-page-node-id="AIjMFD8OKacEQc3HWM4L1o"><h4 data-page-node-id="uBtWmAMdnqYZcYCi2NHsB8">天气</h4><p data-page-node-id="6V3WHU3Bj6hCFzOPmCSzaa">9 月底第比利斯 15–24°C，巴统湿润多雨 18–22°C。斯瓦涅季山区 5–15°C，<b data-page-node-id="yLjwVXw8Ig01Bzu49qYfYw">可能降雪</b>，早晚接近 0°C。冲锋衣必带，分层穿。</p></div>
+    <div class="tip" data-page-node-id="cpHd35Ve8E1kVMKOublGqw"><h4 data-page-node-id="NzLf2lqAmglGCipEELRWPv">徒步</h4><p data-page-node-id="JPRmWI7H1wCTtzHvW0WROi">Mestia→Ushguli 是成熟路线，路迹清晰，沿途村庄都能住宿吃饭。但<b data-page-node-id="KLNZBvLKOfs4wdvBfS10rg">天气变化快、手机信号不稳定</b>，每天早出发，别赶夜路。见到牧羊犬别跑，绕行。</p></div>
+    <div class="tip" data-page-node-id="EcecOoH50Ct8kM7x4jZi6J"><h4 data-page-node-id="NsFGWlwNtpGxqZEO7KEP7r">安全</h4><p data-page-node-id="JWZtGZZcPLvdm5t3kIWavH">格鲁吉亚整体安全，<b data-page-node-id="wdrJYAMZgeK7HVVqnnLIQN">Tbilisoba 人极多，注意随身物品</b>，包背前面。紧急电话 <b data-page-node-id="DCN0yEnWGsJFIxyD9HZlwv">112</b>；中国外交部全球领保热线 <b data-page-node-id="azSf1x9Qxq5ZZQSNMclDI0">+86-10-12308</b>。</p></div>
+    <div class="tip" data-page-node-id="AQs9rW2HoyqJYdEbd1udTp"><h4 data-page-node-id="us0fA3UC9MLvjH7dp7guY1">语言</h4><p data-page-node-id="GUmiyCd2LMqQ0Ykx1UTVgO">格鲁吉亚语为主，俄语通用，旅游区和年轻人英语可通。山区基本只讲格语，<b data-page-node-id="mQqnDeZTtm0MIj7x2GWE3a">提前把民宿地址截图存格文</b>。</p></div>
+    <div class="tip" data-page-node-id="EsMpnJBJQBFyxQk7ESF1Ag"><h4 data-page-node-id="mzgVWZxm8Z9ze9gZF2EMDv">周一闭馆</h4><p data-page-node-id="obdZCYTN7yw9HwU03cA2Wn">第比利斯<b data-page-node-id="GyJ2HL2pANPMGu7QqKq6LX">几乎所有博物馆周一闭馆</b>（国家博物馆、国家美术馆、艺术宫、露天民俗博物馆）。9/28 和 10/5 都是周一，行程已全部排成户外，不会白跑。</p></div>
+  </div>
+</section>
+
+<footer data-page-node-id="RWOcFjREaS4vLIY7mKTbkW">
+  页面时间一律标注时区 · GET = 格鲁吉亚时间 UTC+4 · 北京时间 UTC+8<br data-page-node-id="zHwb5OU3lhP8C6NY1O5bV8">
+  公开页面，未收录任何确认号、证件号、房间号
+</footer>
+</div>
+
+<script>
+"use strict";
+/* ---------- 时区：格鲁吉亚固定 UTC+4，中国固定 UTC+8，均无夏令时 ---------- */
+var GET = 240, CN = 480;
+function fmtIn(ms, off){
+  var d = new Date(ms + off*60000), p = function(n){return n<10?"0"+n:""+n;};
+  return p(d.getUTCMonth()+1)+"/"+p(d.getUTCDate())+" "+p(d.getUTCHours())+":"+p(d.getUTCMinutes());
+}
+function hmIn(ms, off){
+  var d = new Date(ms + off*60000), p = function(n){return n<10?"0"+n:""+n;};
+  return p(d.getUTCHours())+":"+p(d.getUTCMinutes());
+}
+function dateIn(ms, off){
+  var d = new Date(ms + off*60000), p = function(n){return n<10?"0"+n:""+n;};
+  return d.getUTCFullYear()+"-"+p(d.getUTCMonth()+1)+"-"+p(d.getUTCDate());
+}
+
+/* ---------- 地点 ---------- */
+var P = {
+  pvg:   {n:"上海浦东机场 T2", lat:31.1443, lon:121.8083, q:"Shanghai Pudong Airport Terminal 2"},
+  dxb:   {n:"迪拜国际机场", lat:25.2532, lon:55.3657, q:"Dubai International Airport"},
+  tbs:   {n:"第比利斯国际机场 TBS", lat:41.6691, lon:44.9547, q:"Tbilisi International Airport"},
+  vert:  {n:"56 Vertskhli St 公寓", lat:41.6930, lon:44.7960, q:"56 Vertskhli Street Tbilisi"},
+  mestia:{n:"梅斯蒂亚 Mestia", lat:43.0453, lon:42.7290, q:"Mestia Georgia"},
+  zhab:  {n:"扎贝希 Zhabeshi", lat:43.0100, lon:42.7400, q:"Zhabeshi Mestia Georgia"},
+  adishi:{n:"阿迪希 Adishi", lat:43.0200, lon:42.6600, q:"Adishi Mestia Georgia"},
+  ushg:  {n:"乌树故里 Ushguli", lat:42.9167, lon:43.0167, q:"Ushguli Georgia"},
+  batumi:{n:"巴统 24 Noe Zhordania St", lat:41.6435, lon:41.6350, q:"24 Noe Zhordania Street Batumi"},
+  fab:   {n:"99 M. Tsinandzgvrishvili St 公寓", lat:41.7090, lon:44.7870, q:"99 Mikheili Tsinandzgvrishvili Street Tbilisi"},
+  free:  {n:"自由广场 Freedom Square", lat:41.6934, lon:44.8010, q:"Freedom Square Tbilisi"},
+  mtsk:  {n:"姆茨赫塔 Mtskheta", lat:41.8400, lon:44.7200, q:"Mtskheta Georgia"},
+  gori:  {n:"哥里 Gori", lat:41.9800, lon:44.1100, q:"Gori Georgia"},
+  kut:   {n:"库塔伊西 Kutaisi", lat:42.2717, lon:42.7074, q:"Kutaisi Georgia"},
+  bagrati:{n:"Bagrati 主教座堂", lat:42.2772, lon:42.7045, q:"Bagrati Cathedral Kutaisi"},
+  gelati:{n:"Gelati 修道院", lat:42.2953, lon:42.7661, q:"Gelati Monastery Kutaisi"},
+  zug:   {n:"祖格迪迪 Zugdidi", lat:42.5083, lon:41.8700, q:"Zugdidi Georgia"},
+  nari:  {n:"Narikala 要塞", lat:41.6876, lon:44.8090, q:"Narikala Fortress Tbilisi"},
+  sulfur:{n:"硫磺浴 Abanotubani", lat:41.6890, lon:44.8100, q:"Abanotubani Sulfur Baths Tbilisi"},
+  dryb:  {n:"旱桥市场 Dry Bridge", lat:41.6990, lon:44.7960, q:"Dry Bridge Market Tbilisi"},
+  rike:  {n:"Rike 公园", lat:41.6910, lon:44.8130, q:"Rike Park Tbilisi"},
+  orbel: {n:"Orbeliani 广场", lat:41.6970, lon:44.7974, q:"Orbeliani Square Tbilisi"},
+  botanic:{n:"巴统植物园", lat:41.6917, lon:41.7000, q:"Batumi Botanical Garden"},
+  oldtown:{n:"第比利斯老城", lat:41.6910, lon:44.8030, q:"Old Tbilisi"}
+};
+/* 小地图上的短标签 */
+var SN = {
+  pvg:"浦东", dxb:"迪拜", tbs:"TBS机场", vert:"Vertskhli公寓", mestia:"梅斯蒂亚",
+  zhab:"扎贝希", adishi:"阿迪希", ushg:"乌树故里", batumi:"巴统", fab:"Fabrika公寓",
+  free:"自由广场", mtsk:"姆茨赫塔", gori:"哥里", kut:"库塔伊西", bagrati:"Bagrati",
+  gelati:"Gelati", zug:"祖格迪迪", nari:"Narikala", sulfur:"硫磺浴", dryb:"旱桥市场",
+  rike:"Rike公园", orbel:"Orbeliani", botanic:"植物园", oldtown:"老城"
+};
+function gmap(k){
+  var p = P[k]; if(!p) return "#";
+  if(p.lat) return "https://www.google.com/maps/dir/?api=1&destination="+p.lat+","+p.lon+"&travelmode=driving";
+  return "https://www.google.com/maps/search/?api=1&query="+encodeURIComponent(p.q);
+}
+function gmapAll(list){
+  var pts = list.map(function(k){
+    var p = P[k]; return p.lat ? p.lat+","+p.lon : encodeURIComponent(p.q);
+  });
+  if(pts.length < 2) return gmap(list[0]);
+  var mid = pts.slice(1,-1).join("|");
+  var u = "https://www.google.com/maps/dir/?api=1&origin="+pts[0]+"&destination="+pts[pts.length-1]+"&travelmode=driving";
+  if(mid) u += "&waypoints="+encodeURIComponent(mid);
+  return u;
+}
+
+/* ---------- 地图投影 ---------- */
+function px(lon){ return (lon-40)*114.29; }
+function py(lat){ return 20 + (43.7-lat)*148.15; }
+
+var LAND = "M0,64.4 L80,52.6 L160,49.6 L228.6,49.6 L297.1,57 L354.3,71.9 L411.4,105.9 L468.6,141.5 "+
+           "L531.4,156.3 L582.9,180 L640,194.8 L697.1,209.7 L737.1,230.4 L756.6,264.4 L742.9,301.5 "+
+           "L708.6,323.7 L651.4,338.5 L594.3,345.8 L537.1,357.8 L480,368.2 L422.9,372.6 L365.7,368.2 "+
+           "L308.6,357.8 L251.4,348.9 L211.4,342.9 L177.1,353.3 L182.9,308.9 L177.1,257 L194.3,212.6 "+
+           "L188.6,160.7 L171.4,123.7 L114.3,101.5 L45.7,86.7 Z";
+var SEA  = "M-40,50 L45.7,86.7 L114.3,101.5 L171.4,123.7 L188.6,160.7 L194.3,212.6 L177.1,257 "+
+           "L182.9,308.9 L177.1,353.3 L150,470 L-40,470 Z";
+var NORTH = [[0,64.4],[80,52.6],[160,49.6],[228.6,49.6],[297.1,57],[354.3,71.9],[411.4,105.9],
+             [468.6,141.5],[531.4,156.3],[582.9,180],[640,194.8],[697.1,209.7],[737.1,230.4],[756.6,264.4]];
+function northY(x){
+  for(var i=0;i<NORTH.length-1;i++){
+    var a=NORTH[i], b=NORTH[i+1];
+    if(x>=a[0] && x<=b[0]){
+      var t=(x-a[0])/(b[0]-a[0]||1);
+      return a[1]+(b[1]-a[1])*t;
+    }
+  }
+  return x<0?64.4:264.4;
+}
+function mountains(){
+  var s="";
+  for(var x=30;x<720;x+=38){
+    var by=northY(x), h=26+((x*7919)%17), w=24;
+    s+="M"+(x-w)+","+(by+30)+" L"+(x-w*0.35)+","+(by-h+8)+" L"+x+","+(by-h)+" L"+(x+w*0.4)+","+(by-h*0.55+4)+" L"+(x+w)+","+(by+30)+" Z ";
+  }
+  return s;
+}
+
+/* ---------- 每日数据 ---------- */
+var DAYS = [
+{
+ n:1, date:"9/25", wd:"周五", color:"#E8734A",
+ title:"抵达第比利斯", sub:"浦东 → 迪拜 → TBS · 取车",
+ stay:"56 Vertskhli St（Mtatsminda 山坡）",
+ route:["tbs","vert","oldtown","nari"],
+ nav:["tbs","vert","nari"],
+ items:[
+  {t:"00:05", tz:"北京", c:"上海浦东 T2 起飞 · <b>EK303</b>", s:"9/24 晚 21:00 前到机场"},
+  {t:"04:45", tz:"迪拜", c:"迪拜 T3 落地 → 转 T2", s:"不出机场，中转 7h25m"},
+  {t:"12:10", tz:"迪拜", c:"迪拜 T2 起飞 · <b>EK2200</b>", s:""},
+  {t:"15:35", tz:"GET", c:"落地第比利斯 TBS", s:"过关、取行李、换少量现金、买电话卡", p:"tbs"},
+  {t:"18:00", tz:"GET", c:"机场 Alamo 柜台取车", s:"RAV4 · 拍车身视频留证 · 当面问能否自由广场还车", p:"tbs", b:"需确认"},
+  {t:"19:00", tz:"GET", c:"开车去公寓", s:"机场 → 老城约 30–40 min", p:"vert"},
+  {t:"20:00", tz:"GET", c:"老城晚餐", s:"第一次吃 khinkali + khachapuri", p:"oldtown"},
+  {t:"21:30", tz:"GET", c:"Narikala 要塞看夜景", s:"缆车或步行上山，全城灯光", p:"nari"}
+ ]
+},
+{
+ n:2, date:"9/26", wd:"周六", color:"#D9A521",
+ title:"第比利斯 → 梅斯蒂亚", sub:"470 km · 7–8 h · 长途日",
+ stay:"Mestia Panorama（房东 Lasha）",
+ route:["vert","gori","kut","zug","mestia"],
+ nav:["vert","gori","kut","zug","mestia"],
+ warn:"全程最累的一天。Zugdidi → Mestia 是 130 km 盘山路，弯多、大货车多、本地人开得快。<b>绝不走夜路</b>，每 2 小时停一次。",
+ items:[
+  {t:"07:00", tz:"GET", c:"出发", s:"470 km，导航走 Gori → Kutaisi → Zugdidi → Mestia", p:"vert"},
+  {t:"09:30", tz:"GET", c:"哥里 Gori 补给", s:"加油、便利店、上厕所", p:"gori"},
+  {t:"12:00", tz:"GET", c:"库塔伊西午餐", s:"进山前最后一顿正经饭，顺便取现金", p:"kut"},
+  {t:"14:00", tz:"GET", c:"祖格迪迪 加油", s:"<b>这里是最后一个大加油站</b>，加满", p:"zug"},
+  {t:"15:30", tz:"GET", c:"抵达梅斯蒂亚", s:"办入住、确认停车、买徒步干粮和现金", p:"mestia", b:"需确认"},
+  {t:"17:00", tz:"GET", c:"镇上补给 + 休整", s:"超市、药店、ATM；和房东确认明早行李和停车", p:"mestia"}
+ ]
+},
+{
+ n:3, date:"9/27", wd:"周日", color:"#4A9D6E",
+ title:"徒步 D1 · 梅斯蒂亚 → 扎贝希", sub:"约 12 km · 5–6 h",
+ stay:"扎贝希村 Zhabeshi（现场订民宿）",
+ route:["mestia","zhab"],
+ nav:["mestia","zhab"],
+ warn:"<b>车停梅斯蒂亚</b>，徒步结束后在乌树故里包 4WD 回来取。出发前把车锁好、别留贵重物品。",
+ items:[
+  {t:"09:00", tz:"GET", c:"退房、行李寄存", s:"车停民宿附近，和 Lasha 确认能停 4 天"},
+  {t:"10:00", tz:"GET", c:"从 Seti 广场启程", s:"爬升平缓，前半段穿森林和牧场", p:"mestia"},
+  {t:"13:00", tz:"GET", c:"路上午餐 / 干粮", s:"沿途村庄有小卖部，但只收现金"},
+  {t:"17:00", tz:"GET", c:"抵达扎贝希", s:"找民宿、订明晚阿迪希的房", p:"zhab", b:"需提前订"},
+  {t:"19:00", tz:"GET", c:"民宿晚餐", s:"家庭餐通常含早晚餐，可提前和老板说", p:"zhab"}
+ ]
+},
+{
+ n:4, date:"9/28", wd:"周一", color:"#3D8BB5",
+ title:"徒步 D2 · 扎贝希 → 阿迪希", sub:"约 10 km · 5–6 h",
+ stay:"阿迪希村 Adishi（现场订民宿）",
+ route:["zhab","adishi"],
+ nav:["zhab","adishi"],
+ warn:"今天要跨阿迪希恰拉冰川河，<b>水位看天气</b>，雨后可能要骑马或绕行。早上一定问民宿老板当前路况。",
+ items:[
+  {t:"09:00", tz:"GET", c:"出发", s:"出发前问老板路况和过河点", p:"zhab"},
+  {t:"11:00", tz:"GET", c:"过河 / 爬升段", s:"风景最好的一段，正对阿迪希冰川"},
+  {t:"15:00", tz:"GET", c:"抵达阿迪希", s:"立刻订明晚乌树故里住宿", p:"adishi", b:"需提前订"},
+  {t:"17:00", tz:"GET", c:"村子闲逛", s:"斯瓦涅季塔楼、石头巷子，随手拍都是明信片", p:"adishi"}
+ ]
+},
+{
+ n:5, date:"9/29", wd:"周二", color:"#7B68B6",
+ title:"徒步 D3 · 阿迪希 → 乌树故里", sub:"徒步 14 km 6–7h 或 包车 1.5–2h",
+ stay:"乌树故里 Ushguli（现场订民宿）",
+ route:["adishi","ushg"],
+ nav:["adishi","ushg"],
+ warn:"<b>看体力二选一</b>：走完约 6–7 小时；不想走就包 4WD，烂路 1.5–2 小时。两种都能当天到乌树故里，别硬撑。",
+ items:[
+  {t:"08:00", tz:"GET", c:"早餐后决定走还是包车", s:"让民宿老板帮忙叫 4WD，顺便约明天回梅斯蒂亚的车", p:"adishi", b:"需提前订"},
+  {t:"09:00", tz:"GET", c:"A 方案：徒步出发", s:"14 km，翻 Khalde 垭口后一路下到乌树故里"},
+  {t:"10:30", tz:"GET", c:"B 方案：4WD 包车", s:"碎石路颠 1.5–2h，中途会过河滩"},
+  {t:"16:00", tz:"GET", c:"抵达乌树故里", s:"欧洲最高常住村落之一（2100m），UNESCO", p:"ushg"},
+  {t:"17:30", tz:"GET", c:"Lamaria 教堂 + 村子日落", s:"背靠什哈拉峰（5193m），高加索最壮的取景点", p:"ushg"}
+ ]
+},
+{
+ n:6, date:"9/30", wd:"周三", color:"#C1548A",
+ title:"乌树故里 → 梅斯蒂亚 → 巴统", sub:"包车 2h + 自驾 410 km 5–6h",
+ stay:"24 Noe Zhordania St（房东 Linda）",
+ route:["ushg","mestia","zug","batumi"],
+ nav:["ushg","mestia","batumi"],
+ warn:"一天内两段长途，<b>务必 7:00 准时上车</b>。给巴统房东 Linda 发消息说会晚到（14:00 check-in，预计 15:30–16:30 到）。",
+ items:[
+  {t:"07:00", tz:"GET", c:"4WD 包车 乌树故里 → 梅斯蒂亚", s:"烂路约 2h，提前一天约好的车", p:"ushg", b:"需提前订"},
+  {t:"09:00", tz:"GET", c:"回到梅斯蒂亚取车", s:"检查车况、加满油", p:"mestia"},
+  {t:"09:30", tz:"GET", c:"开车去巴统", s:"410 km，5–6h，原路经祖格迪迪南下", p:"batumi"},
+  {t:"13:00", tz:"GET", c:"祖格迪迪午餐 + 加油", s:"", p:"zug"},
+  {t:"15:30", tz:"GET", c:"抵达巴统", s:"入住老城公寓，给 Linda 报平安", p:"batumi"},
+  {t:"18:00", tz:"GET", c:"海滨大道散步看日落", s:"黑海边，Ali & Nino 雕像", p:"batumi"}
+ ]
+},
+{
+ n:7, date:"10/1", wd:"周四", color:"#2FA3A3",
+ title:"巴统一日", sub:"植物园 · 老城 · 黑海",
+ stay:"24 Noe Zhordania St",
+ route:["botanic","batumi"],
+ nav:["botanic","batumi"],
+ items:[
+  {t:"09:30", tz:"GET", c:"巴统植物园", s:"黑海边山坡上的大花园，值半天", p:"botanic"},
+  {t:"13:00", tz:"GET", c:"老城午餐", s:"Adjarian khachapuri（船型奶酪饼）发源地", p:"batumi"},
+  {t:"15:00", tz:"GET", c:"欧洲广场 + 老城闲逛", s:"", p:"batumi"},
+  {t:"18:00", tz:"GET", c:"黑海边日落", s:"海滨大道 5 km，骑车或散步", p:"batumi"}
+ ]
+},
+{
+ n:8, date:"10/2", wd:"周五", color:"#B5762E",
+ title:"巴统 → 库塔伊西 → 第比利斯 · 还车", sub:"约 390 km · 6–6.5 h 含停留",
+ stay:"99 M. Tsinandzgvrishvili St（房东 Liana）",
+ route:["batumi","kut","gelati","tbs","fab"],
+ nav:["batumi","kut","tbs"],
+ warn:"<b>17:00 是合同还车的硬时间</b>，库塔伊西最多留 2.5 小时，<b>12:30 必须上路</b>。时间一紧就砍掉城外的 Gelati，只留市区的 Bagrati。还车地点以 9/25 取车时的确认为准：自由广场还车则先去公寓放行李再步行 10 min 还车。",
+ items:[
+  {t:"07:00", tz:"GET", c:"巴统出发", s:"退房前把行李装车，导航设库塔伊西", p:"batumi"},
+  {t:"09:30", tz:"GET", c:"抵库塔伊西", s:"150 km，2.5–3h。9/26 那天只是在这儿吃午饭，没进教堂", p:"kut"},
+  {t:"09:45", tz:"GET", c:"Bagrati 主教座堂", s:"UNESCO，11 世纪，山上俯瞰全城，30–40 min 够", p:"bagrati", b:"免费"},
+  {t:"10:45", tz:"GET", c:"Gelati 修道院", s:"UNESCO，城东北 10 km，车程 20 min。<b>时间紧就砍掉</b>。女性需包头巾／长裙", p:"gelati", b:"免费"},
+  {t:"12:00", tz:"GET", c:"库塔伊西午餐", s:"回市区吃，别拖", p:"kut"},
+  {t:"12:30", tz:"GET", c:"出发去第比利斯", s:"240 km，3–3.5h。这是硬时间，不能再拖", p:"tbs"},
+  {t:"16:00", tz:"GET", c:"TBS 机场还车", s:"合同 17:00，留 1h 缓冲。加满油、拍里程和油表、当场确认无新增划痕", p:"tbs"},
+  {t:"17:00", tz:"GET", c:"打车回市区", s:"约 30–40 min，25–30 GEL", p:"fab"},
+  {t:"17:30", tz:"GET", c:"入住 Fabrika 公寓", s:"Chughureti 区，房东 Liana，14:00 后随时可入住", p:"fab"},
+  {t:"19:00", tz:"GET", c:"Fabrika 院子喝一杯", s:"老纺织厂改造的院子，咖啡＋酒吧＋餐厅", p:"fab"}
+ ]
+},
+{
+ n:9, date:"10/3", wd:"周六", color:"#D4493F",
+ title:"Tbilisoba 城市节 · 第一天", sub:"Orbeliani 广场 + Rike 公园 · 全城庆祝",
+ stay:"99 M. Tsinandzgvrishvili St",
+ route:["fab","orbel","rike","oldtown"],
+ nav:["fab","orbel","rike","oldtown"],
+ warn:"<b>全城最热闹的两天</b>：Rike 公园和 Orbeliani 广场是主会场，美食区、手工艺市集、老爷车展、大乐队、民族舞、葡萄酒和蜂蜜品鉴，压轴音乐会 + 烟花。<b>人极多，包背前面，餐厅提前订位。</b>",
+ items:[
+  {t:"11:00", tz:"GET", c:"Orbeliani 广场 主会场", s:"市集、美食区、手工艺摊，从公寓步行约 20 min", p:"orbel", b:"免费"},
+  {t:"14:00", tz:"GET", c:"Rike 公园", s:"第二个主会场，舞台演出、亲子区", p:"rike", b:"免费"},
+  {t:"17:00", tz:"GET", c:"老城巡游", s:"整条老城都有表演和摊位", p:"oldtown"},
+  {t:"20:00", tz:"GET", c:"压轴音乐会 + 烟花", s:"节日以正式音乐会和荣誉市民颁奖收尾", p:"rike"}
+ ]
+},
+{
+ n:10, date:"10/4", wd:"周日", color:"#5D8A3A",
+ title:"姆茨赫塔半日 + Tbilisoba", sub:"UNESCO 古都 · 20 km",
+ stay:"99 M. Tsinandzgvrishvili St",
+ route:["mtsk","oldtown","orbel"],
+ nav:["mtsk","oldtown","orbel"],
+ warn:"姆茨赫塔是格鲁吉亚古都，<b>教堂全天开放、户外为主，周一不闭馆</b>。放在今天是因为 10/5 是返程日，不该再往外跑。",
+ items:[
+  {t:"09:00", tz:"GET", c:"打车去姆茨赫塔", s:"20 km，约 30 min，或 Didube 车站坐小巴", p:"mtsk"},
+  {t:"09:30", tz:"GET", c:"Svetitskhoveli 主教座堂", s:"11 世纪，格鲁吉亚东正教心脏，UNESCO", p:"mtsk", b:"免费"},
+  {t:"11:00", tz:"GET", c:"Jvari 修道院", s:"山顶 6 世纪教堂，俯瞰两河交汇，明信片机位", p:"mtsk"},
+  {t:"13:00", tz:"GET", c:"回第比利斯午餐", s:"", p:"oldtown"},
+  {t:"15:00", tz:"GET", c:"Tbilisoba 第二天", s:"补昨天没逛完的摊位和演出", p:"orbel"},
+  {t:"19:00", tz:"GET", c:"节日最后一晚", s:"老城晚餐（务必提前订位）", p:"oldtown"}
+ ]
+},
+{
+ n:11, date:"10/5", wd:"周一", color:"#6B6B8F",
+ title:"第比利斯 morning + 返程", sub:"16:35 起飞 · 提前 3h 到机场",
+ stay:"— 当晚在飞机上",
+ route:["sulfur","dryb","fab","tbs"],
+ nav:["sulfur","dryb","tbs"],
+ warn:"<b>今天是周一，所有博物馆闭馆</b>，行程已全部排成户外和市集，不会白跑。国际航班提前 3 小时到机场，13:00 准时出发。",
+ items:[
+  {t:"08:30", tz:"GET", c:"硫磺浴 Abanotubani", s:"早起泡个澡解徒步的乏，建议提前预约", p:"sulfur", b:"建议预约"},
+  {t:"10:30", tz:"GET", c:"旱桥市场 Dry Bridge", s:"跳蚤市场，苏联老物件、油画、铜器", p:"dryb"},
+  {t:"12:00", tz:"GET", c:"退房、取行李", s:"", p:"fab"},
+  {t:"13:00", tz:"GET", c:"打车去 TBS 机场", s:"约 30–40 min，预算 25–30 GEL", p:"tbs"},
+  {t:"16:35", tz:"GET", c:"起飞 · <b>EK2201</b>", s:"第比利斯 → 迪拜 19:50", p:"tbs"},
+  {t:"02:50", tz:"迪拜", c:"10/6 迪拜 T3 起飞 · <b>EK302</b>", s:"→ 北京时间 15:30 落地浦东 T2"}
+ ]
+}
+];
+
+/* ---------- 里程碑（倒计时锚点） ---------- */
+var MS = [
+ {t:"2026-09-25T00:05:00+08:00", off:CN,  l:"浦东起飞 · EK303", s:"上海 → 迪拜", u:"北京时间"},
+ {t:"2026-09-25T15:35:00+04:00", off:GET, l:"落地第比利斯", s:"EK2200 · TBS", u:"GET"},
+ {t:"2026-09-25T18:00:00+04:00", off:GET, l:"机场取车", s:"Alamo · RAV4", u:"GET"},
+ {t:"2026-09-26T07:00:00+04:00", off:GET, l:"出发去梅斯蒂亚", s:"470 km · 7–8 h", u:"GET"},
+ {t:"2026-09-27T10:00:00+04:00", off:GET, l:"徒步启程", s:"Mestia → Zhabeshi", u:"GET"},
+ {t:"2026-09-30T07:00:00+04:00", off:GET, l:"包车回梅斯蒂亚取车", s:"Ushguli → Mestia", u:"GET"},
+ {t:"2026-10-02T07:00:00+04:00", off:GET, l:"巴统出发 · 经库塔伊西", s:"390 km · 当天还车", u:"GET"},
+ {t:"2026-10-03T11:00:00+04:00", off:GET, l:"Tbilisoba 开逛", s:"Orbeliani 广场 / Rike 公园", u:"GET"},
+ {t:"2026-10-04T09:00:00+04:00", off:GET, l:"出发去姆茨赫塔", s:"UNESCO 古都 · 半日", u:"GET"},
+ {t:"2026-10-05T13:00:00+04:00", off:GET, l:"出发去机场", s:"TBS · 提前 3 h", u:"GET"},
+ {t:"2026-10-05T16:35:00+04:00", off:GET, l:"返程起飞 · EK2201", s:"第比利斯 → 迪拜", u:"GET"},
+ {t:"2026-10-06T15:30:00+08:00", off:CN,  l:"抵达上海浦东", s:"EK302 · 到家", u:"北京时间"}
+].map(function(m){ m.ms = new Date(m.t).getTime(); return m; });
+
+var UNIT = [["天",86400000],["时",3600000],["分",60000],["秒",1000]];
+function renderNow(){
+  var now = Date.now(), nx = null, prev = null;
+  for(var i=0;i<MS.length;i++){
+    if(MS[i].ms > now){ nx = MS[i]; prev = MS[i-1]||null; break; }
+  }
+  var what = document.getElementById("nWhat"),
+      sub  = document.getElementById("nSub"),
+      cd   = document.getElementById("nCd"),
+      at   = document.getElementById("nAt");
+
+  if(!nx){
+    what.textContent = "旅途已结束";
+    sub.textContent  = "下次再出发";
+    cd.innerHTML = "";
+    at.innerHTML = '<span>最后一项：<b>10/6 15:30 北京时间</b> 抵达上海浦东 T2</span>';
+    return;
+  }
+  var d = nx.ms - now;
+  what.innerHTML = nx.l;
+  sub.textContent = nx.s;
+  var html = "", rest = d;
+  for(var j=0;j<UNIT.length;j++){
+    var v = Math.floor(rest/UNIT[j][1]); rest -= v*UNIT[j][1];
+    html += '<div class="u"><b>'+v+'</b><i>'+UNIT[j][0]+'</i></div>';
+  }
+  cd.innerHTML = html;
+  at.innerHTML =
+    '<span>第比利斯 <b>'+fmtIn(nx.ms, GET)+' GET</b></span>'+
+    '<span>北京 <b>'+fmtIn(nx.ms, CN)+'</b></span>'+
+    '<span>距今 <b>'+Math.ceil(d/86400000)+'</b> 天</span>';
+}
+function renderClock(){
+  var now = Date.now();
+  document.getElementById("nClock").innerHTML =
+    '<div>第比利斯 <b>'+hmIn(now,GET)+'</b> · '+dateIn(now,GET)+'</div>'+
+    '<div>北京 <b>'+hmIn(now,CN)+'</b> · '+dateIn(now,CN)+'</div>';
+}
+
+/* ---------- 总览地图 ---------- */
+function placeDot(k, color, r, label, dy){
+  var p = P[k], x = px(p.lon), y = py(p.lat);
+  var s = '<g class="pt" data-k="'+k+'" style="cursor:pointer">'+
+          '<circle cx="'+x+'" cy="'+y+'" r="'+(r+7)+'" fill="'+color+'" opacity=".14"/>'+
+          '<circle cx="'+x+'" cy="'+y+'" r="'+r+'" fill="'+color+'" stroke="var(--paper)" stroke-width="1.6"/>';
+  if(label) s += '<text x="'+(x+ (dy&&dy.x?dy.x:0))+'" y="'+(y+(dy&&dy.y?dy.y:-13))+'" text-anchor="middle" '+
+    'font-size="15" font-weight="700" fill="var(--ink)" stroke="var(--paper)" stroke-width="3.5" '+
+    'paint-order="stroke" style="pointer-events:none">'+label+'</text>';
+  return s + '</g>';
+}
+function routePath(keys, color, dash){
+  if(keys.length<2) return "";
+  var d = "M", first = true, k, p;
+  for(var i=0;i<keys.length;i++){
+    k = keys[i]; p = P[k];
+    if(!p) continue;
+    var x = px(p.lon), y = py(p.lat);
+    if(first){ d += x+","+y; first=false; }
+    else {
+      var pk = P[keys[i-1]], x0 = px(pk.lon), y0 = py(pk.lat);
+      var mx = (x0+x)/2, my = (y0+y)/2, dx = x-x0, dy = y-y0;
+      var nx = -dy*0.13, ny = dx*0.13;
+      d += " Q"+(mx+nx)+","+(my+ny)+" "+x+","+y;
+    }
+  }
+  return '<path d="'+d+'" fill="none" stroke="'+color+'" stroke-width="3.2" stroke-linecap="round" '+
+         'stroke-linejoin="round" opacity=".9"'+(dash?' stroke-dasharray="7 6"':'')+'/>';
+}
+function drawBigMap(){
+  var svg = document.getElementById("bigmap"), s = "";
+  s += '<defs><filter id="rgh"><feTurbulence type="fractalNoise" baseFrequency="0.026" numOctaves="3" result="n"/>'+
+       '<feDisplacementMap in="SourceGraphic" in2="n" scale="3.2" xChannelSelector="R" yChannelSelector="G"/></filter></defs>';
+  s += '<path d="'+SEA+'" fill="var(--sea)" opacity=".85"/>';
+  s += '<g filter="url(#rgh)"><path d="'+LAND+'" fill="var(--land)" stroke="var(--line2)" stroke-width="2.2"/></g>';
+  s += '<path d="'+mountains()+'" fill="none" stroke="var(--sketch)" stroke-width="1.5" opacity=".45" stroke-linejoin="round"/>';
+  /* 海浪 */
+  s += '<g stroke="var(--sketch)" stroke-width="1.3" fill="none" opacity=".4">';
+  for(var w=0;w<5;w++){
+    var yy = 150+w*58, xx = 20+w*4;
+    s += 'M'+xx+','+yy+' q14,-7 28,0 t28,0 ';
+  }
+  s += '</g>';
+  s += '<text x="52" y="240" font-size="17" font-weight="800" fill="var(--muted)" '+
+       'transform="rotate(-72 52 240)" letter-spacing="6">黑 海</text>';
+  /* 路线 */
+  DAYS.forEach(function(d){ s += routePath(d.route, d.color, false); });
+  /* 站点 */
+  var seen = {};
+  var order = ["tbs","vert","gori","kut","zug","mestia","zhab","adishi","ushg","batumi","free","fab","mtsk","oldtown","nari","sulfur","dryb","botanic","orbel","rike"];
+  order.forEach(function(k){
+    if(seen[k]) return; seen[k]=1;
+    var big = ["mestia","ushg","batumi","fab","vert","tbs","zhab","adishi","mtsk"].indexOf(k)>=0;
+    if(!big) return;
+    var lb = {mestia:"梅斯蒂亚",ushg:"乌树故里",batumi:"巴统",fab:"第比利斯",vert:"第比利斯",tbs:"TBS机场",zhab:"扎贝希",adishi:"阿迪希",mtsk:"姆茨赫塔"}[k];
+    var dy = {fab:{x:0,y:-14},vert:{x:-46,y:-4},tbs:{x:34,y:20},zhab:{x:-6,y:-12},adishi:{x:-40,y:-12},ushg:{x:6,y:20},mtsk:{x:-38,y:14}}[k];
+    s += placeDot(k, "var(--accent)", big?6:4.5, lb, dy);
+  });
+  svg.innerHTML = s;
+  bindPts(svg);
+
+  var lg = "";
+  DAYS.forEach(function(d){
+    lg += '<span><i style="background:'+d.color+'"></i>D'+d.n+' '+d.date+'</span>';
+  });
+  document.getElementById("legend").innerHTML = lg;
+}
+
+/* ---------- 每日小地图 ---------- */
+function dayMap(day){
+  var s = "";
+  s += '<path d="'+SEA+'" fill="var(--sea)" opacity=".7"/>';
+  s += '<path d="'+LAND+'" fill="var(--land)" stroke="var(--line2)" stroke-width="2"/>';
+  s += '<path d="'+mountains()+'" fill="none" stroke="var(--sketch)" stroke-width="1.4" opacity=".35" stroke-linejoin="round"/>';
+  s += routePath(day.route, day.color, false);
+  day.route.forEach(function(k,i){
+    var p = P[k]; if(!p) return;
+    var x = px(p.lon), y = py(p.lat);
+    var isEnd = (i===0 || i===day.route.length-1);
+    s += '<circle cx="'+x+'" cy="'+y+'" r="'+(isEnd?7:5)+'" fill="'+day.color+'" stroke="var(--paper)" stroke-width="2"/>';
+    s += '<text x="'+x+'" y="'+(y-13)+'" text-anchor="middle" font-size="14" font-weight="700" fill="var(--ink)" '+
+         'stroke="var(--paper)" stroke-width="3.5" paint-order="stroke">'+(SN[k]||p.n)+'</text>';
+  });
+  return '<svg viewBox="0 0 800 470" role="img" aria-label="D'+day.n+' 路线">'+s+'</svg>';
+}
+
+/* ---------- 渲染每日 ---------- */
+function renderDays(){
+  var host = document.getElementById("days"), html = "";
+  DAYS.forEach(function(d){
+    html += '<div class="day" data-d="'+d.n+'">'+
+      '<div class="day-h">'+
+        '<span class="dot" style="background:'+d.color+'"></span>'+
+        '<span class="dnum">D'+d.n+'</span>'+
+        '<span class="dtitle">'+d.title+'<em>'+d.date+' '+d.wd+' · '+d.sub+'</em></span>'+
+        '<span class="caret">▶</span>'+
+      '</div>'+
+      '<div class="day-b">'+
+        '<div class="daymap">'+dayMap(d)+'</div>'+
+        '<a class="navall" href="'+gmapAll(d.nav)+'" target="_blank" rel="noopener">一键导航 D'+d.n+' 全天路线 ↗</a>'+
+        '<div class="stay">当晚住：<b>'+d.stay+'</b></div>'+
+        (d.warn?'<div class="note">'+d.warn+'</div>':'')+
+        d.items.map(function(it){
+          return '<div class="it"><span class="t">'+it.t+'</span><span class="c">'+
+                 (it.p?'<span class="plink" data-p="'+it.p+'">'+it.c+'</span>':it.c)+
+                 (it.b?'<span class="badge'+(it.b==="免费"||it.b==="建议预约"?" ok":"")+'">'+it.b+'</span>':'')+
+                 (it.s?'<small>'+it.s+'</small>':'')+
+                 (it.tz && it.tz!=="GET"?'<small style="color:var(--faint)">时区：'+it.tz+'</small>':'')+
+                 '</span></div>';
+        }).join("")+
+      '</div></div>';
+  });
+  host.innerHTML = html;
+  host.querySelectorAll(".day-h").forEach(function(h){
+    h.addEventListener("click", function(){ h.parentNode.classList.toggle("open"); });
+  });
+  bindPts(host);
+}
+
+/* ---------- 点地名 → 导航 ---------- */
+function bindPts(root){
+  root.querySelectorAll(".plink,.pt").forEach(function(el){
+    if(el.dataset.bound) return; el.dataset.bound = 1;
+    el.addEventListener("click", function(){
+      var k = el.dataset.k || el.dataset.p;
+      if(!k || !P[k]) return;
+      window.open(gmap(k), "_blank", "noopener");
+    });
+  });
+}
+
+/* ---------- 配色切换 ---------- */
+(function(){
+  var b = document.getElementById("themeBtn");
+  var saved = null;
+  try{ saved = localStorage.getItem("ge-theme"); }catch(e){}
+  if(saved) document.documentElement.setAttribute("data-theme", saved);
+  b.addEventListener("click", function(){
+    var cur = document.documentElement.getAttribute("data-theme");
+    if(!cur) cur = (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) ? "dark" : "light";
+    var nx = cur === "dark" ? "light" : "dark";
+    document.documentElement.setAttribute("data-theme", nx);
+    try{ localStorage.setItem("ge-theme", nx); }catch(e){}
+  });
+})();
+
+/* ---------- 启动 ---------- */
+drawBigMap();
+renderDays();
+renderNow();
+renderClock();
+setInterval(renderNow, 1000);
+setInterval(renderClock, 1000);
+(function(){
+  try{
+    var today = dateIn(Date.now(), GET);
+    DAYS.forEach(function(d){
+      var mmdd = d.date.replace(/^(\d+)\/(\d+)$/, function(_,a,b){ return "2026-"+("0"+a).slice(-2)+"-"+("0"+b).slice(-2); });
+      if(mmdd === today){
+        var el = document.querySelector('.day[data-d="'+d.n+'"]');
+        if(el){ el.classList.add("open"); el.scrollIntoView({block:"center"}); }
+      }
+    });
+  }catch(e){}
+})();
+</script>
+</body>
+</html>

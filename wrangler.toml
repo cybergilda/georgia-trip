@@ -1,0 +1,5 @@
+name = "georgia-trip"
+compatibility_date = "2026-09-07"
+
+# 纯静态站点：public/ 下所有文件作为 Worker 静态资源发布
+assets = { directory = "./public" }
