@@ -1112,11 +1112,11 @@ function spRenderTop(){
     +   '<button class="spbtn" onclick="spToggleSet()">改人名</button>'
     +   '<button class="spbtn" onclick="spReset()">清空重来</button>'
     + '</div>'
-    + '<div class="spset" id="spset">'
-    +   '<label>第一位　<input id="spw0" value="' + w0 + '" oninput="spWho(0,this.value)"></label>'
-    +   '<label>第二位　<input id="spw1" value="' + w1 + '" oninput="spWho(1,this.value)"></label>'
+    + '<div class="spset' + (SPSETOPEN ? ' on' : '') + '" id="spset">'
+    +   '<label>第一位　<input id="spw0" value="' + w0 + '" oninput="spWho(0,this.value)" onchange="spRender()"></label>'
+    +   '<label>第二位　<input id="spw1" value="' + w1 + '" oninput="spWho(1,this.value)" onchange="spRender()"></label>'
     + '</div>'
-    + '<div class="spio" id="spio">'
+    + '<div class="spio' + (SPIOOPEN ? ' on' : '') + '" id="spio">'
     +   '<textarea id="spiotx" placeholder="点「复制」把记录发给同伴；或把同伴发来的文本粘在这里点「导入」"></textarea>'
     +   '<div class="r">'
     +     '<button class="spbtn pri" onclick="spCopy()">复制</button>'
@@ -1177,7 +1177,34 @@ function spRenderList(){
   document.getElementById('splist').innerHTML = html;
 }
 
-function spRender(){ spRenderTop(); spRenderList(); }
+var SPSETOPEN = false, SPIOOPEN = false;
+function spSnapshot(){
+  var s = {};
+  var t = document.getElementById('spiotx'); if(t) s.io = t.value;
+  if(SPOPEN){
+    var fn = document.getElementById('spfn');
+    if(fn){
+      var g = function(id){ var e = document.getElementById(id); return e || {}; };
+      s.f = {n:fn.value, a:g('spfa').value||'', c:g('spfc').value||'',
+             p:g('spfp').value||'0', aa:!!g('spfaa').checked};
+    }
+  }
+  return s;
+}
+function spRestore(s){
+  if(!s) return;
+  var t = document.getElementById('spiotx'); if(t && s.io != null) t.value = s.io;
+  if(s.f && SPOPEN){
+    var g = function(id){ return document.getElementById(id); };
+    var fn = g('spfn'); if(!fn) return;
+    fn.value = s.f.n;
+    var fa=g('spfa'); if(fa) fa.value = s.f.a;
+    var fc=g('spfc'); if(fc) fc.value = s.f.c;
+    var fp=g('spfp'); if(fp) fp.value = s.f.p;
+    var faa=g('spfaa'); if(faa) faa.checked = s.f.aa;
+  }
+}
+function spRender(){ var s = spSnapshot(); spRenderTop(); spRenderList(); spRestore(s); }
 
 function spForm(d, c){
   SPOPEN = (SPOPEN === d) ? null : d;
@@ -1218,12 +1245,13 @@ function spEdit(id){
   it.n = n; it.a = spNum(a); it.aa = aa;
   spSave(); spRender();
 }
-function spWho(i, v){ SPD.who[i] = v || (i ? '同伴' : '我'); spSave(); spRenderTop(); }
-function spToggleSet(){ document.getElementById('spset').classList.toggle('on'); }
+function spWho(i, v){ SPD.who[i] = v || (i ? '同伴' : '我'); spSave(); }
+function spToggleSet(){ SPSETOPEN = !SPSETOPEN; var s = spSnapshot(); spRenderTop(); spRestore(s); }
 function spToggleIO(){
-  var el = document.getElementById('spio');
-  el.classList.toggle('on');
-  if(el.classList.contains('on')) document.getElementById('spiotx').value = JSON.stringify(SPD);
+  SPIOOPEN = !SPIOOPEN;
+  var s = spSnapshot();
+  spRenderTop(); spRestore(s);
+  if(SPIOOPEN) document.getElementById('spiotx').value = JSON.stringify(SPD);
 }
 function spCopy(){
   var t = document.getElementById('spiotx');
