@@ -219,6 +219,63 @@ footer{text-align:center;color:var(--faint);font-size:12px;margin-top:28px;line-
 .pack li b{color:var(--ink)}
 .pack li.key:before{background:var(--warn);opacity:1}
 
+
+/* ===== 消费清单 ===== */
+.spsum{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-bottom:11px}
+.spstat{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:10px 8px;text-align:center}
+.spstat .v{font-size:18px;font-weight:800;color:var(--ink);line-height:1.25;font-variant-numeric:tabular-nums}
+.spstat .v small{font-size:11px;font-weight:600;color:var(--muted)}
+.spstat .k{font-size:10.5px;color:var(--muted);margin-top:3px}
+.spbar{display:flex;gap:7px;flex-wrap:wrap;align-items:center;margin-bottom:11px}
+.spbtn{font:600 12.5px/1 inherit;background:var(--chip);color:var(--ink);border:1px solid var(--line);
+  border-radius:20px;padding:7px 12px;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.spbtn:active{transform:scale(.96)}
+.spbtn.pri{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.spday{background:var(--paper);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);
+  padding:12px 13px;margin-bottom:10px}
+.spdh{display:flex;justify-content:space-between;align-items:baseline;gap:8px;margin-bottom:7px}
+.spdnum{font:800 14.5px/1.3 inherit;color:var(--ink)}
+.spdnum span{font-weight:600;font-size:12px;color:var(--muted);margin-left:6px}
+.spdsum{font:700 13px/1 inherit;color:var(--muted);white-space:nowrap;font-variant-numeric:tabular-nums}
+.spcat{margin-top:6px;padding-top:6px;border-top:1px solid var(--line)}
+.spcat:first-child{border-top:none;margin-top:0;padding-top:0}
+.spcn{font-size:11px;font-weight:800;color:var(--muted);letter-spacing:.06em;margin-bottom:3px}
+.sprow{padding:5px 0 6px;border-bottom:1px dashed var(--line)}
+.sprow:last-child{border-bottom:none}
+.spl1{display:flex;align-items:center;gap:8px}
+.spn{flex:1;min-width:0;font-size:13.5px;color:var(--ink);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.spa{font:700 14px/1 inherit;color:var(--ink);font-variant-numeric:tabular-nums;flex:none}
+.spx{width:20px;height:20px;flex:none;border:none;background:transparent;color:var(--muted);
+  font-size:15px;line-height:1;cursor:pointer;padding:0;opacity:.5}
+.spl2{font-size:10.5px;color:var(--muted);margin-top:2px}
+.spl2 b{color:var(--ink);font-weight:700}
+.sptag{display:inline-block;background:var(--chip);border-radius:20px;padding:1px 6px;margin-right:5px}
+.sptag.aa{background:var(--warnbg)}
+.spadd{display:flex;gap:5px;flex-wrap:wrap;margin-top:8px}
+.spadd button{font:600 11.5px/1 inherit;background:transparent;color:var(--muted);
+  border:1px dashed var(--line);border-radius:16px;padding:5px 10px;cursor:pointer}
+.spadd button:active{background:var(--chip)}
+.spform{display:grid;grid-template-columns:1fr 78px;gap:6px;margin-top:7px;padding:9px;
+  background:var(--chip);border-radius:13px}
+.spform input,.spform select{font:400 13px/1 inherit;padding:7px 8px;border:1px solid var(--line);
+  border-radius:9px;background:var(--paper);color:var(--ink);width:100%;box-sizing:border-box}
+.spform .full{grid-column:1/-1;display:flex;gap:6px;align-items:center}
+.spform label{font-size:12px;color:var(--ink);display:flex;align-items:center;gap:4px;white-space:nowrap}
+.spform .ok{flex:none;background:var(--ink);color:var(--paper);border:none;border-radius:9px;
+  padding:7px 14px;font-weight:700;cursor:pointer}
+.spio{display:none;margin-top:9px}
+.spio.on{display:block}
+.spio textarea{width:100%;box-sizing:border-box;height:88px;font:400 11.5px/1.45 ui-monospace,monospace;
+  padding:9px;border:1px solid var(--line);border-radius:11px;background:var(--paper);color:var(--ink);resize:vertical}
+.spio .r{display:flex;gap:7px;margin-top:6px}
+.spempty{font-size:12.5px;color:var(--muted);opacity:.7;padding:4px 0}
+.spset{display:none;margin-top:9px;padding:11px;background:var(--chip);border-radius:13px}
+.spset.on{display:block}
+.spset label{display:block;font-size:12px;color:var(--ink);margin-bottom:5px}
+.spset input{font:400 13px/1 inherit;padding:6px 8px;border:1px solid var(--line);border-radius:9px;
+  background:var(--paper);color:var(--ink);width:96px;box-sizing:border-box;margin-left:5px}
+@media(max-width:420px){.spsum{grid-template-columns:repeat(3,1fr);gap:6px}.spstat .v{font-size:16px}}
+
 </style>
 </head>
 <body data-page-node-id="IDSAXXbe3x3dw4CEJbFuOs">
@@ -443,6 +500,13 @@ footer{text-align:center;color:var(--faint);font-size:12px;margin-top:28px;line-
   公开页面，未收录任何确认号、证件号、房间号
 </footer>
 </div>
+
+
+<section class="sec">
+  <div class="sec-h"><span class="n">SPEND</span><h2>消费清单</h2><span class="hint">按天记 · 自动算 AA</span></div>
+  <div class="card" id="sptop"></div>
+  <div id="splist"></div>
+</section>
 
 <script>
 "use strict";
@@ -944,6 +1008,257 @@ setInterval(renderClock, 1000);
     });
   }catch(e){}
 })();
+
+/* ====================== 消费清单 ====================== */
+var SPKEY = 'gt_spend_v1';
+var SPCATS = ["交通","酒店","景点","餐饮","其他"];
+var SPDAYS = [
+ {d:"预付", t:"出发前已付（机票 / 保险 / 装备）"},
+ {d:"9/25", t:"落地第比利斯 · 取车"},
+ {d:"9/26", t:"TBS → Mestia · 470 km"},
+ {d:"9/27", t:"徒步 D1 · Mestia → Zhabeshi"},
+ {d:"9/28", t:"徒步 D2 · Zhabeshi → Adishi"},
+ {d:"9/29", t:"徒步 D3 · Adishi → Ushguli"},
+ {d:"9/30", t:"Ushguli → Mestia → Batumi"},
+ {d:"10/1", t:"巴统一日"},
+ {d:"10/2", t:"Batumi → Kutaisi → TBS 还车"},
+ {d:"10/3", t:"Tbilisoba 第一天"},
+ {d:"10/4", t:"国家博物馆 + Tbilisoba"},
+ {d:"10/5", t:"返程 · 16:35 起飞"},
+ {d:"10/6", t:"迪拜转机 / 到家"}
+];
+var SPINIT = [
+ ["预付","交通","往返机票 ×2"],["预付","其他","旅行保险 ×2"],["预付","其他","eSIM / 电话卡"],
+ ["9/25","交通","机场 → 市区"],["9/25","酒店","Patio Apartment"],["9/25","餐饮","落地晚餐"],
+ ["9/26","交通","加油 / 长途油耗"],["9/26","酒店","Mestia Panorama"],
+ ["9/27","酒店","Woodside #3 · Zhabeshi"],["9/27","餐饮","民宿早晚餐"],
+ ["9/28","酒店","Adishi 民宿"],
+ ["9/29","酒店","Ushguli 民宿"],
+ ["9/30","交通","4WD 包车 Ushguli→Mestia"],["9/30","酒店","Batumi Stay in Style"],
+ ["10/1","酒店","Batumi Stay in Style"],["10/1","景点","巴统植物园"],
+ ["10/2","交通","还车加油"],["10/2","酒店","Fabrika 公寓"],["10/2","景点","Bagrati / Gelati"],
+ ["10/3","酒店","Fabrika 公寓"],["10/3","餐饮","节日市集吃喝"],
+ ["10/4","酒店","Fabrika 公寓"],["10/4","景点","国家博物馆 ×2"],
+ ["10/5","交通","市区 → TBS 机场"],["10/5","景点","硫磺浴"]
+];
+var SPD = null, SPOPEN = null;
+
+function spBlank(){
+  return {
+    who: ["我","同伴"],
+    rate: 2.65,
+    items: SPINIT.map(function(o,i){ return {id:i+1, d:o[0], c:o[1], n:o[2], a:0, p:0, aa:true}; })
+  };
+}
+function spLoad(){
+  try{
+    var s = localStorage.getItem(SPKEY);
+    if(s){ var o = JSON.parse(s); if(o && o.items) return o; }
+  }catch(e){}
+  return spBlank();
+}
+function spSave(){ try{ localStorage.setItem(SPKEY, JSON.stringify(SPD)); }catch(e){} }
+function spNum(v){ var n = parseFloat(v); return isFinite(n) ? n : 0; }
+function spFmt(n){
+  if(!n) return "0";
+  return (Math.round(n*100)/100).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+function spCalc(){
+  var tot=0, byCat={}, pay=[0,0], owe=[0,0];
+  SPD.items.forEach(function(it){
+    var a = spNum(it.a);
+    if(!a) return;
+    tot += a;
+    byCat[it.c] = (byCat[it.c]||0) + a;
+    pay[it.p] += a;
+    if(it.aa){ owe[0] += a/2; owe[1] += a/2; }
+    else { owe[it.p] += a; }
+  });
+  return {tot:tot, byCat:byCat, pay:pay, owe:owe};
+}
+function spItems(d){ return SPD.items.filter(function(x){ return x.d === d; }); }
+function spDaySum(d){ var s=0; spItems(d).forEach(function(x){ s += spNum(x.a); }); return s; }
+
+function spRenderTop(){
+  var r = spCalc(), rate = spNum(SPD.rate)||1;
+  var diff = r.pay[0] - r.owe[0];
+  var settleTxt;
+  if(Math.abs(diff) < 0.01){ settleTxt = "已平账"; }
+  else if(diff > 0){ settleTxt = SPD.who[1] + " → " + SPD.who[0] + " <b>" + spFmt(diff) + "</b>"; }
+  else { settleTxt = SPD.who[0] + " → " + SPD.who[1] + " <b>" + spFmt(-diff) + "</b>"; }
+
+  var cat = SPCATS.map(function(c){
+    var v = r.byCat[c]||0;
+    return v ? '<div class="spstat"><div class="v">' + spFmt(v) + '</div><div class="k">' + c + '</div></div>' : '';
+  }).join('');
+
+  var w0 = SPD.who[0], w1 = SPD.who[1];
+  var html = ''
+    + '<h3>总览 <span class="tag">GEL 拉里</span></h3>'
+    + '<div class="spsum">'
+    +   '<div class="spstat"><div class="v">' + spFmt(r.tot) + '</div><div class="k">总支出 GEL</div></div>'
+    +   '<div class="spstat"><div class="v">' + spFmt(r.tot/2) + '</div><div class="k">人均 GEL</div></div>'
+    +   '<div class="spstat"><div class="v">' + spFmt(r.tot*rate) + '<small> 元</small></div><div class="k">≈ 人民币</div></div>'
+    + '</div>'
+    + (cat ? '<div class="spsum">' + cat + '</div>' : '')
+    + '<div class="spsum">'
+    +   '<div class="spstat"><div class="v">' + spFmt(r.pay[0]) + '</div><div class="k">' + w0 + ' 实付</div></div>'
+    +   '<div class="spstat"><div class="v">' + spFmt(r.pay[1]) + '</div><div class="k">' + w1 + ' 实付</div></div>'
+    +   '<div class="spstat"><div class="v" style="font-size:12.5px;line-height:1.5">' + settleTxt + '</div><div class="k">结算</div></div>'
+    + '</div>'
+    + '<div class="spbar">'
+    +   '<button class="spbtn pri" onclick="spToggleIO()">导出 / 导入</button>'
+    +   '<button class="spbtn" onclick="spToggleSet()">人名 · 汇率</button>'
+    +   '<button class="spbtn" onclick="spReset()">清空重来</button>'
+    + '</div>'
+    + '<div class="spset" id="spset">'
+    +   '<label>第一位　<input id="spw0" value="' + w0 + '" oninput="spWho(0,this.value)"></label>'
+    +   '<label>第二位　<input id="spw1" value="' + w1 + '" oninput="spWho(1,this.value)"></label>'
+    +   '<label>1 GEL = <input id="sprt" value="' + SPD.rate + '" oninput="spRate(this.value)"> 元人民币</label>'
+    + '</div>'
+    + '<div class="spio" id="spio">'
+    +   '<textarea id="spiotx" placeholder="点「复制」把记录发给同伴；或把同伴发来的文本粘在这里点「导入」"></textarea>'
+    +   '<div class="r">'
+    +     '<button class="spbtn pri" onclick="spCopy()">复制</button>'
+    +     '<button class="spbtn" onclick="spImport()">导入粘贴内容</button>'
+    +     '<button class="spbtn" onclick="spToggleIO()">收起</button>'
+    +   '</div>'
+    + '</div>'
+    + '<div class="note">记录保存在<b>本机浏览器</b>，换设备／换人看不到。一个人记完点「导出」把文本发给对方「导入」，两边就一致；也可以发给我，我合并进页面做成终稿。</div>';
+
+  document.getElementById('sptop').innerHTML = html;
+}
+
+function spRenderList(){
+  var html = SPDAYS.map(function(D){
+    var its = spItems(D.d), sum = spDaySum(D.d);
+    var body = SPCATS.map(function(c){
+      var sub = its.filter(function(x){ return x.c === c; });
+      if(!sub.length) return '';
+      var rows = sub.map(function(it){
+        var a = spNum(it.a), per = it.aa ? (a/2) : a;
+        return '<div class="sprow">'
+          + '<div class="spl1">'
+          +   '<div class="spn" onclick="spEdit(' + it.id + ')">' + (it.n || '（未命名）') + '</div>'
+          +   '<div class="spa">' + (a ? spFmt(a) : '—') + '</div>'
+          +   '<button class="spx" onclick="spDel(' + it.id + ')">✕</button>'
+          + '</div>'
+          + '<div class="spl2"><span class="sptag">' + SPD.who[it.p] + ' 付</span>'
+          + (it.aa ? '<span class="sptag aa">AA · 人均 ' + spFmt(per) + '</span>' : '<span class="sptag">独自承担</span>')
+          + '</div></div>';
+      }).join('');
+      return '<div class="spcat"><div class="spcn">' + c + '</div>' + rows + '</div>';
+    }).join('');
+
+    var form = '';
+    if(SPOPEN === D.d){
+      form = '<div class="spform">'
+        + '<input id="spfn" placeholder="项目名，如 晚餐 / 打车" class="full">'
+        + '<input id="spfa" type="number" inputmode="decimal" placeholder="金额 GEL">'
+        + '<select id="spfc">' + SPCATS.map(function(c){ return '<option>' + c + '</option>'; }).join('') + '</select>'
+        + '<div class="full">'
+        +   '<select id="spfp"><option value="0">' + SPD.who[0] + ' 付</option><option value="1">' + SPD.who[1] + ' 付</option></select>'
+        +   '<label><input type="checkbox" id="spfaa" checked style="width:auto"> AA</label>'
+        +   '<button class="ok" onclick="spAdd(\'' + D.d + '\')">保存</button>'
+        + '</div></div>';
+    }
+
+    return '<div class="spday">'
+      + '<div class="spdh">'
+      +   '<div class="spdnum">' + D.d + '<span>' + D.t + '</span></div>'
+      +   '<div class="spdsum">' + (sum ? spFmt(sum) + ' GEL' : '—') + '</div>'
+      + '</div>'
+      + (body || '<div class="spempty">还没记账</div>')
+      + form
+      + '<div class="spadd">'
+      + SPCATS.map(function(c){ return '<button onclick="spForm(\'' + D.d + '\',\'' + c + '\')">+ ' + c + '</button>'; }).join('')
+      + '</div></div>';
+  }).join('');
+  document.getElementById('splist').innerHTML = html;
+}
+
+function spRender(){ spRenderTop(); spRenderList(); }
+
+function spForm(d, c){
+  SPOPEN = (SPOPEN === d) ? null : d;
+  spRenderList();
+  if(SPOPEN === d){
+    var fn = document.getElementById('spfn');
+    if(fn){
+      if(c) document.getElementById('spfc').value = c;
+      fn.focus();
+      fn.scrollIntoView({block:"center", behavior:"smooth"});
+    }
+  }
+}
+function spAdd(d){
+  var n = document.getElementById('spfn').value.trim();
+  var a = spNum(document.getElementById('spfa').value);
+  var c = document.getElementById('spfc').value;
+  var p = parseInt(document.getElementById('spfp').value,10) || 0;
+  var aa = document.getElementById('spfaa').checked;
+  if(!n && !a){ SPOPEN = null; spRenderList(); return; }
+  var maxId = 0;
+  SPD.items.forEach(function(x){ if(x.id > maxId) maxId = x.id; });
+  SPD.items.push({id:maxId+1, d:d, c:c, n:n||'（未命名）', a:a, p:p, aa:aa});
+  SPOPEN = null; spSave(); spRender();
+}
+function spDel(id){
+  SPD.items = SPD.items.filter(function(x){ return x.id !== id; });
+  spSave(); spRender();
+}
+function spEdit(id){
+  var it = SPD.items.filter(function(x){ return x.id === id; })[0];
+  if(!it) return;
+  var n = prompt('项目名', it.n);
+  if(n === null) return;
+  var a = prompt('金额（GEL）', it.a);
+  if(a === null) return;
+  var aa = confirm('确定 = 两人 AA 平分\n取消 = ' + SPD.who[it.p] + ' 独自承担');
+  it.n = n; it.a = spNum(a); it.aa = aa;
+  spSave(); spRender();
+}
+function spWho(i, v){ SPD.who[i] = v || (i ? '同伴' : '我'); spSave(); spRenderTop(); }
+function spRate(v){ SPD.rate = spNum(v) || 1; spSave(); spRenderTop(); }
+function spToggleSet(){ document.getElementById('spset').classList.toggle('on'); }
+function spToggleIO(){
+  var el = document.getElementById('spio');
+  el.classList.toggle('on');
+  if(el.classList.contains('on')) document.getElementById('spiotx').value = JSON.stringify(SPD);
+}
+function spCopy(){
+  var t = document.getElementById('spiotx');
+  t.select(); t.setSelectionRange(0, 999999);
+  var ok = false;
+  try{ ok = document.execCommand('copy'); }catch(e){}
+  if(!ok && navigator.clipboard){
+    navigator.clipboard.writeText(t.value).then(function(){ alert('已复制，去粘贴给同伴'); });
+    return;
+  }
+  alert(ok ? '已复制，去粘贴给同伴' : '复制失败，请长按选中后手动复制');
+}
+function spImport(){
+  var v = document.getElementById('spiotx').value.trim();
+  if(!v){ alert('先把文本粘进输入框'); return; }
+  try{
+    var o = JSON.parse(v);
+    if(!o || !o.items || !o.items.length){ alert('内容里没有消费记录'); return; }
+    if(!confirm('导入会覆盖当前 ' + SPD.items.length + ' 条记录，确定？')) return;
+    SPD = o;
+    if(!SPD.who || SPD.who.length < 2) SPD.who = ['我','同伴'];
+    if(!SPD.rate) SPD.rate = 2.65;
+    spSave(); spRender();
+    alert('导入成功，共 ' + SPD.items.length + ' 条');
+  }catch(e){ alert('格式不对，请确认复制的是完整文本'); }
+}
+function spReset(){
+  if(!confirm('清空全部记录并恢复预填项？不可撤销。')) return;
+  SPD = spBlank(); spSave(); spRender();
+}
+
+SPD = spLoad();
+spRender();
+
 </script>
 </body>
 </html>
